@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `PracABD1`.`cursos` (
+  `CursoID` INT NOT NULL,
+  `nombre` VARCHAR(15) NOT NULL,
+  `area` VARCHAR(30) NULL,
+  `edicion` INT NOT NULL,
+  PRIMARY KEY (`CursoID`),
+  UNIQUE INDEX `CursoID_UNIQUE` (`CursoID` ASC) VISIBLE)
+  TABLESPACE ABDDBA_TBLS_cursos
+ENGINE = InnoDB;
+
