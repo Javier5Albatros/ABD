@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `PracABD1`.`personas` (
   `EnParo` BOOLEAN NOT NULL,
   `Canal` ENUM('0' , '1','2','3','4'),
   `FechaNac` DATE NOT NULL,
-	`Email` VARCHAR(60) NOT NULL,
+  `Email` VARCHAR(60) NOT NULL,
   PRIMARY KEY (`PersonaID`),
   UNIQUE INDEX `PersonaID_UNIQUE` (`PersonaID` ASC) VISIBLE)
   TABLESPACE ABDDBA_TBLS_personas
