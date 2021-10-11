@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `PracABD1`.`personas` (
   `PersonaID` INT NOT NULL,
-  `Dni` INT UNIQUE NOT NULL,
+  `Dni` VARCHAR(9) UNIQUE NOT NULL,
   `Nombre` VARCHAR(20) NOT NULL,
   `Apellidos` VARCHAR(30) NOT NULL,
   `Genero` VARCHAR(1) NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `PracABD1`.`personas` (
   `CodPostal` INT NULL,
   `Telefono` VARCHAR(9) NULL,
   `EnParo` BOOLEAN NULL,
-  `Canal` ENUM('0' , '1','2','3','4'),
+  `Canal` INT NULL,
   `FechaNac` DATE NULL,
   `Email` VARCHAR(60) NULL,
   CONSTRAINT CHECK (Genero IN ('H', 'M')), 
