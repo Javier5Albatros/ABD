@@ -1,0 +1,2 @@
+ALTER TABLE matriculados_interesados DROP CONSTRAINT cursos_fk;
+ALTER TABLE matriculados_interesados DROP CONSTRAINT personas_fk;
