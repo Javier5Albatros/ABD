@@ -43,4 +43,4 @@ CREATE TABLE IF NOT EXISTS `PracABD1`.`matriculados_interesados` (
   FOREIGN KEY (PersonaID) REFERENCES personas(PersonaID),
   FOREIGN KEY (CursoID) REFERENCES cursos(CursoID))
   TABLESPACE ABDDBA_TBLS_matriculados
-ENGINE = InnoDB
+ENGINE = InnoDB;
