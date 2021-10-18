@@ -10,3 +10,13 @@ personas INNER JOIN matriculados_interesados ON matriculados_interesados.Persona
 INNER JOIN cursos ON cursos.CursoID = matriculados_interesados.CursoID
 WHERE provincia LIKE 'Madrid' AND edicion = 2018
 ORDER BY apellidos DESC
+
+SELECT Nombre,
+    Apellidos,
+    Email
+FROM personas
+WHERE PersonaID IN (
+        SELECT PersonaID
+        FROM matriculados_interesados
+        WHERE cursoID = 256
+    );
