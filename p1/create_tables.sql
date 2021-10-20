@@ -15,9 +15,7 @@ CREATE TABLE IF NOT EXISTS `PracABD1`.`personas` (
   `Email` VARCHAR(60) NULL,
   CONSTRAINT CHECK (Genero IN ('H', 'M')), 
   CONSTRAINT CHECK (EnParo IN (0, 1)), 
-  CONSTRAINT CHECK (Canal IN (0, 1, 2, 3, 4)), 
-  PRIMARY KEY (`PersonaID`),
-  UNIQUE INDEX `PersonaID_UNIQUE` (`PersonaID` ASC) VISIBLE)
+  CONSTRAINT CHECK (Canal IN (0, 1, 2, 3, 4))) 
   TABLESPACE ABDDBA_TBLS_personas
 ENGINE = InnoDB;
 
@@ -27,9 +25,7 @@ CREATE TABLE IF NOT EXISTS `PracABD1`.`cursos` (
   `nombre` VARCHAR(15) NOT NULL,
   `area` VARCHAR(30) NULL,
   `edicion` INT NOT NULL,
-  PRIMARY KEY (`CursoID`),
-  CONSTRAINT CHECK (edicion BETWEEN 2013 AND 2020 OR edicion LIKE 1492),
-  UNIQUE INDEX `CursoID_UNIQUE` (`CursoID` ASC) VISIBLE)
+  CONSTRAINT CHECK (edicion BETWEEN 2013 AND 2020 OR edicion LIKE 1492))
   TABLESPACE ABDDBA_TBLS_cursos
 ENGINE = InnoDB;
 
@@ -38,9 +34,6 @@ CREATE TABLE IF NOT EXISTS `PracABD1`.`matriculados_interesados` (
   `CursoID` INT NOT NULL,
   `matriculado` TINYINT NULL,
   `comentarios` VARCHAR(500) NULL,
-  PRIMARY KEY (`PersonaID`, `CursoID`),
-  CONSTRAINT CHECK (matriculado LIKE 1 OR NULL),
-  FOREIGN KEY (PersonaID) REFERENCES personas(PersonaID),
-  FOREIGN KEY (CursoID) REFERENCES cursos(CursoID))
+  CONSTRAINT CHECK (matriculado LIKE 1 OR NULL))
   TABLESPACE ABDDBA_TBLS_matriculados
 ENGINE = InnoDB;
