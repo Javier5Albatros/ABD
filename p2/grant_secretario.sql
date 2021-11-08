@@ -1,3 +1,2 @@
-GRANT SELECT ON pracabd1.* TO comercial;
-GRANT INSERT, UPDATE ON personas TO comercial;
-GRANT UPDATE(matriculado, comentarios), INSERT ON matriculados_interesados TO comercial;
+GRANT INSERT ON cursos TO secretario;
+GRANT UPDATE(matriculado) ON matriculados_interesados TO secretario;
