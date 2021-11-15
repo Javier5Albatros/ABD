@@ -1,0 +1,1 @@
+SET GLOBAL activate_all_roles_on_login = TRUE;
